@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Небольшая библиотека: интерактивная страница с книгами из Google Таблицы.">
+  <title>Книжная полка — контрольная работа</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Книжная полка — к началу страницы">
+        <span class="brand-symbol" aria-hidden="true">▤</span>
+        <span>КНИЖНАЯ ПОЛКА</span>
+      </a>
+      <span class="header-note">Учебный проект · HTML / CSS / JS</span>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> ЧИТАТЬ · ИЗУЧАТЬ · ОТКРЫВАТЬ</div>
+          <h1 id="hero-heading">Хорошая книга —<br><em>новая идея.</em></h1>
+          <p class="lead">Небольшая подборка классических произведений. Нажми на кнопку, а ниже посмотри список книг, который можно загрузить из Google Таблицы.</p>
+          <button id="change-text-button" class="primary-button" type="button">Изменить текст <span aria-hidden="true">↗</span></button>
+          <p id="interactive-message" class="interactive-message" aria-live="polite">Пока кнопка не нажата. Попробуй!</p>
+        </div>
+        <div class="hero-illustration">
+          <img src="assets/books.svg" alt="Иллюстрация с книгами, лампой и веточкой растения" width="540" height="450">
+          <span class="illustration-caption">5 книг · 5 историй</span>
+        </div>
+      </section>
+
+      <section class="catalog" aria-labelledby="catalog-heading">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">НАША ПОДБОРКА</p>
+            <h2 id="catalog-heading">Книги на полке</h2>
+          </div>
+          <p class="section-description">Данные таблицы обновляются при загрузке страницы.</p>
+        </div>
+        <div class="table-frame">
+          <div class="table-topline">
+            <div class="table-title">Каталог произведений</div>
+            <span class="book-count" id="book-count">5 записей</span>
+          </div>
+          <div class="table-scroll">
+            <table aria-label="Список книг">
+              <thead>
+                <tr><th scope="col">№</th><th scope="col">Название</th><th scope="col">Автор</th><th scope="col">Год</th></tr>
+              </thead>
+              <tbody id="books-body"></tbody>
+            </table>
+          </div>
+          <p id="load-status" class="load-status" role="status">Загружаем список книг…</p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <span>Книжная полка © 2026</span>
+      <span>Учебная работа: Git · GitHub Pages · JavaScript · Google Sheets</span>
+    </footer>
+  </div>
+</body>
+</html>
