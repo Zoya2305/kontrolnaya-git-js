@@ -66,3 +66,7 @@ td:nth-child(4) { color: var(--muted); font-variant-numeric: tabular-nums; }
   .site-footer { flex-direction: column; gap: 8px; }
 }
 @media (max-width: 390px) { .site-shell { padding: 0 16px; } th, td { padding-left: 16px; padding-right: 16px; } }
+button:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 3px;
+}
